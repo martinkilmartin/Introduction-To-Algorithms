@@ -1,7 +1,8 @@
 function insertionSortAsc(originalArray) {
   if (originalArray.length < 2) return originalArray
   const array = [...originalArray]
-  for (let i = 1; i < array.length; i++) {
+  const arrLen = array.length
+  for (let i = 1; i < arrLen; i++) {
     let key = array[i]
     let j = i - 1
     while (j >= 0 && array[j] > key) {
@@ -16,10 +17,11 @@ function insertionSortAsc(originalArray) {
 function insertionSortDesc(originalArray) {
   if (originalArray.length < 2) return originalArray
   const array = [...originalArray]
-  for (let i = array.length - 2; i >= 0; i--) {
+  const arrLen = array.length
+  for (let i = arrLen - 2; i >= 0; i--) {
     let key = array[i]
     let j = i
-    while (j < array.length && array[j + 1] > key) {
+    while (j < arrLen && array[j + 1] > key) {
       array[j] = array[j + 1]
       j = j + 1
     }
