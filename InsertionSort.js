@@ -32,5 +32,5 @@ function insertionSortDesc(originalArray) {
 
 module.exports = {
   insertionSortAsc,
-  insertionSortDesc
+  insertionSortDesc,
 }
