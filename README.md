@@ -1,6 +1,6 @@
 # Introduction-To-Algorithms
 ## 1. Insertion Sort
-> Incremental 
+> Incremental Algorithm
 
 ```
 1.   for i = 2 to Array.length
@@ -43,7 +43,7 @@
 
 
 ## 2. Merge Sort
-> Recursive
+> Recursive Algorithm a.k.a. the divide-and-conquer algorithm
 
 ```
 1.  function sort(Array) {
@@ -101,5 +101,5 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 | O(n log(n))           | O(n)                   |
 
 ## 3. Maximum Crossing SubArray
-> Recursive
+> Recursive Algorithm a.k.a. the divide-and-conquer algorithm
 
