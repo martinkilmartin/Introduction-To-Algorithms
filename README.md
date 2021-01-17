@@ -47,7 +47,7 @@
 
 ```
 1.  function mergeSort(Array) {
-2.      if (Array.length) return Array
+2.      if (Array.length == 1) return Array
 3.      LeftArray = Array.firstHalf
 4.      RightArray = Array.rightHalf
 5.      LeftSortedArray = mergeSort(LeftArray)
