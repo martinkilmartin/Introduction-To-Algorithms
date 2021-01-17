@@ -46,12 +46,12 @@
 > Recursive
 
 ```
-1.  function mergeSort(Array) {
+1.  function sort(Array) {
 2.      if (Array.length == 1) return Array
 3.      LeftArray = Array.firstHalf
 4.      RightArray = Array.rightHalf
-5.      LeftSortedArray = mergeSort(LeftArray)
-6.      RightSortedArray = mergeSort(RightArray)
+5.      LeftSortedArray = sort(LeftArray)
+6.      RightSortedArray = sort(RightArray)
 7.      return merge(LeftSortedArray, RightSortedArray)
 8.  }
 9.
@@ -83,32 +83,15 @@
 ``` [9,8,7,6,5,4,3,2,1] ```
 
 ```
-[ 9, 8, 7, 6, 5, 4, 3, 2, 1 ]
-[ 9, 8, 7, 6 ]
-[ 9, 8 ]
-[ 9 ]
-[ 8 ]
-[ 9 ] [ 8 ]
-[ 7, 6 ]
-[ 7 ]
-[ 6 ]
-[ 7 ] [ 6 ]
-[ 8, 9 ] [ 6, 7 ]
-[ 5, 4, 3, 2, 1 ]
-[ 5, 4 ]
-[ 5 ]
-[ 4 ]
-[ 5 ] [ 4 ]
-[ 3, 2, 1 ]
-[ 3 ]
-[ 2, 1 ]
-[ 2 ]
-[ 1 ]
-[ 2 ] [ 1 ]
-[ 3 ] [ 1, 2 ]
-[ 4, 5 ] [ 1, 2, 3 ]
-[ 6, 7, 8, 9 ] [ 1, 2, 3, 4, 5 ]
-[ 1, 2, 3, 4, 5, 6, 7, 8, 9 ]
+Sort                        [9, 8, 7, 6, 5, 4, 3, 2, 1]
+Sort                [9, 8, 7, 6]            [5, 4, 3, 2, 1]
+Sort               [9, 8]   [7, 6]         [5, 4]   [3, 2, 1]
+Sort              [9]  [8] [7]  [6]        [5] [4] [3]  [2, 1]
+Sort                                                   [2]  [1]
+Merge                                               [3] [1, 2]
+Merge              [8, 9]    [6,7]          [4, 5]   [1, 2, 3]
+Merge                 [6, 7, 8, 9]           [1, 2, 3, 4, 5]
+Merge                       [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ### Complexity
