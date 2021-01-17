@@ -100,5 +100,6 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 | --------------------- | ---------------------- |
 | O(n log(n))           | O(n)                   |
 
-
+## 3. Maximum Crossing SubArray
+> Recursive
 
