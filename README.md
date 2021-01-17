@@ -1,5 +1,9 @@
 # Introduction-To-Algorithms
-## 1. Insertion Sort
+## 1. Bubble Sort
+> Incremental Algorithm
+
+
+## 2. Insertion Sort
 > Incremental Algorithm
 
 ```
@@ -42,7 +46,7 @@
 | O(n<sup>2</sup>)      | O(1)                   |
 
 
-## 2. Merge Sort
+## 3. Merge Sort
 > Recursive Algorithm a.k.a. the divide-and-conquer algorithm
 
 ```
@@ -100,6 +104,6 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 | --------------------- | ---------------------- |
 | O(n log(n))           | O(n)                   |
 
-## 3. Maximum Crossing SubArray
+## 4. Maximum Crossing SubArray
 > Recursive Algorithm a.k.a. the divide-and-conquer algorithm
 
