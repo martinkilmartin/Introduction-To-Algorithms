@@ -2,7 +2,36 @@
 ## 1. Bubble Sort
 > Incremental Algorithm
 
+```
+1.  for i = 1 to Array.length
+2.      for j = Array.length downto i + 1
+3.          if  Array[j] < Array[j - 1]
+4.              swap Array[j] with Array[j - 1]
+```
+* Example
+``` [3,2,1] ```
+```
+2. 3,2,1
+3. 3,2,1
+4. 3,1,2
+4. 1,3,2
+2. 1,3,2
+3. 1,3,2
+4. 1,2,3
+[ 1, 2, 3 ]
 
+alt
+
+i:0 [ 3, 2, 1 ]
+j:3 [ 3, 2, 1 ]
+j:2 [ 3, 2, 1 ]
+j:1 [ 3, 1, 2 ]
+i:1 [ 1, 3, 2 ]
+j:3 [ 1, 3, 2 ]
+j:2 [ 1, 3, 2 ]
+[ 1, 2, 3 ]
+
+```
 ## 2. Insertion Sort
 > Incremental Algorithm
 
