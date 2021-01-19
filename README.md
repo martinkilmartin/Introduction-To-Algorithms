@@ -11,23 +11,21 @@
 * Example
 ``` [3,2,1] ```
 ```
-3. 3,2,1
-4. 3,1,2
-4. 1,3,2
-3. 1,3,2
-4. 1,2,3
-[ 1, 2, 3 ]
-
-alt
-
-i:0,j:3 [ 3, 2, 1 ]
-i:0,j:2 [ 3, 2, 1 ]
-i:0,j:1 [ 3, 1, 2 ]
-i:1,j:3 [ 1, 3, 2 ]
-i:1,j:2 [ 1, 3, 2 ]
-[ 1, 2, 3 ]
+3. i{0}: Array[j]{1} < Array[j - 1]{2}
+4. {[3,1,2]}
+3. i{0}: Array[j]{1} < Array[j - 1]{3}
+4. {[1,3,2]}
+3. i{1}: Array[j]{2} < Array[j - 1]{3}
+4. {[1,2,3]}
 
 ```
+
+### Complexity
+
+| Worst Time Complexity | Worst Space Complexity |
+| --------------------- | ---------------------- |
+| O(n<sup>2</sup>)      | O(1)                   |
+
 ## 2. Insertion Sort
 > Incremental Algorithm
 
@@ -72,7 +70,10 @@ i:1,j:2 [ 1, 3, 2 ]
 
 
 ## 3. Merge Sort
-> Recursive Algorithm a.k.a. the divide-and-conquer algorithm
+> Recursive Algorithm a.k.a. divide-and-conquer(and-combine) algorithm
+> * **Divide** the **problem** into *sub-problems*
+> * **Conquer** recursively solve the *smallest* sub-problems
+> * **Combine** the *sub-solutions* into the **solution** 
 
 ```
 1.  function sort(Array) {
@@ -130,5 +131,14 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 | O(n log(n))           | O(n)                   |
 
 ## 4. Maximum Crossing SubArray
-> Recursive Algorithm a.k.a. the divide-and-conquer algorithm
+> Recursive Algorithm a.k.a. divide-and-conquer(and-combine) algorithm
 
+* Example
+``` [-2,1,-3,4,-1,2,1,-5,4] ```
+```
+{
+    start: 3,
+    end: 6,
+    sum: 6,
+}
+```

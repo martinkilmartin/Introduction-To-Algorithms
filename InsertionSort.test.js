@@ -1,10 +1,10 @@
 const { insertionSortAsc, insertionSortDesc } = require("./InsertionSort")
-const { unsorted, sortedAsc, sortedDesc } = require("./TestConstants")
+const { UNSORTED_ARRAY, SORTED_ARRAY_ASC, SORTED_ARRAY_DESC } = require("./TestConstants")
 
 test("insertion sort ascending", () => {
-  expect(insertionSortAsc(unsorted)).toStrictEqual(sortedAsc)
+  expect(insertionSortAsc(UNSORTED_ARRAY)).toStrictEqual(SORTED_ARRAY_ASC)
 })
 
 test("insertion sort descending", () => {
-  expect(insertionSortDesc(unsorted)).toStrictEqual(sortedDesc)
+  expect(insertionSortDesc(UNSORTED_ARRAY)).toStrictEqual(SORTED_ARRAY_DESC)
 })
