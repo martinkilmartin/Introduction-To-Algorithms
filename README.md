@@ -11,11 +11,11 @@
 * Example
 ``` [3,2,1] ```
 ```
-3. i{0}: Array[j]{1} < Array[j - 1]{2}
+3. i{1},j{3}: Array[j]{1} < Array[j - 1]{2}
 4. {[3,1,2]}
-3. i{0}: Array[j]{1} < Array[j - 1]{3}
+3. i{0},j{2}: Array[j]{1} < Array[j - 1]{3}
 4. {[1,3,2]}
-3. i{1}: Array[j]{2} < Array[j - 1]{3}
+3. i{1},j{3}: Array[j]{2} < Array[j - 1]{3}
 4. {[1,2,3]}
 
 ```
@@ -33,7 +33,7 @@
 1.   for i = 2 to Array.length
 2.       key = Array[i]
 3.       j = i - 1
-4.       while (j > 0 AND Array[j] > key)
+4.       while (j > 1 AND Array[j] > key)
 5.           Array[j + 1] = Array[j]
 6.           j = j - 1
 7.       Array[j + 1] = key 
@@ -44,21 +44,21 @@
 
 ``` 
 2. key = {2} 
-3. j = {0} 
+3. j = {1} 
 4. Array[j]{3} > key{2}
 5.      {[3,3,1]}
-6.      j = {-1}
+6.      j = {0}
 7. {[2,3,1]}
 ```
 ```
 2. key = {1}
-3. j = {1}
+3. j = {2}
 4. Array[j]{3} > key{1}
 5.      {[2,3,3]}
-6.      j = {0}
+6.      j = {1}
 4. Array[j]{2} > key{1}
 5.      {[2,2,3]}
-6.      j = {-1}
+6.      j = {0}
 7. {[1,2,3]}   
 ```
 
@@ -88,20 +88,20 @@
 10. function merge(LeftArray, RightArray) {
 11.     MergeArray[]
 12.     while (LeftArray AND RightArray) {
-13.         if (LeftArray[0] > RightArray[0]) {
-14.             MergeArray.push(RightArray[0])
+13.         if (LeftArray[1] > RightArray[1]) {
+14.             MergeArray.push(RightArray[1])
 15.             RightArray.shift()
 16.         } else {
-17.             MergeArray.push(LeftArray[0])
+17.             MergeArray.push(LeftArray[1])
 18.             LeftArray.shift()
 19.         }
 20.     }
 21.     while (LeftArray) {
-22.         MergeArray.push(LeftArray[0])
+22.         MergeArray.push(LeftArray[1])
 23.         LeftArray.shift()
 24.     }
 25.     while (RightArray) {
-26.         MergeArray.push(RightArray[0])
+26.         MergeArray.push(RightArray[1])
 27.         RightArray.shift()
 28.     }
 29.     return MergeArray
