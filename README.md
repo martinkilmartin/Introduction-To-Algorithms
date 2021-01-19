@@ -1,6 +1,6 @@
 # Introduction-To-Algorithms
 ## 1. Bubble Sort
-> Incremental Algorithm
+> Incremental Algorithm pseudocode
 
 ```
 1.  for i = 1 to Array.length
@@ -8,7 +8,7 @@
 3.          if  Array[j] < Array[j - 1]
 4.              swap Array[j] with Array[j - 1]
 ```
-* Example
+* Example intermediate states
 ``` [3,2,1] ```
 ```
 3. i{1},j{3}: Array[j]{1} < Array[j - 1]{2}
@@ -31,7 +31,7 @@
 | O(n<sup>2</sup>)      | O(1)                   |
 
 ## 2. Insertion Sort
-> Incremental Algorithm
+> Incremental Algorithm pseudocode
 
 ```
 1.   for i = 2 to Array.length
@@ -43,9 +43,8 @@
 7.       Array[j + 1] = key 
 ```
 
-* Example
+* Example intermediate states 
 ``` [3,2,1] ```
-
 ``` 
 2. key = {2} 
 3. j = {1} 
@@ -80,7 +79,7 @@
 > * **Divide** the **problem** into *sub-problems*
 > * **Conquer** recursively solve the *smallest* sub-problems
 > * **Combine** the *sub-solutions* into the **solution** 
-
+> Pseudocode
 ```
 1.  function sort(Array) {
 2.      if (Array.length == 1) return Array
@@ -115,7 +114,7 @@
 
 ```
 
-* Example
+* Example intermediate states 
 ``` [9,8,7,6,5,4,3,2,1] ```
 
 ```
@@ -138,7 +137,8 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 ## 4. Maximum Crossing SubArray
 > Recursive Algorithm a.k.a. divide-and-conquer(and-combine) algorithm
-
+> Pseudocode
+TODO
 * Example
 ``` [-2,1,-3,4,-1,2,1,-5,4] ```
 ```
@@ -148,3 +148,4 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
     sum: 6,
 }
 ```
+TODO
