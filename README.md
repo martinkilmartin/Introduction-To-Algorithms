@@ -77,7 +77,7 @@
 ## 3. Merge Sort
 > Recursive Algorithm a.k.a. divide-and-conquer(and-combine) algorithm
 > * **Divide** the **problem** into *sub-problems*
-> * **Conquer** recursively solve the *smallest* sub-problems
+> * **Conquer** by solving the *smallest* sub-problems
 > * **Combine** the *sub-solutions* into the **solution** 
 > Pseudocode
 ```
