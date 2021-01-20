@@ -1,7 +1,7 @@
 {
   "name": "introduction-to-algorithms",
   "version": "1.0.0",
-  "description": "Back to basics",
+  "description": "Accessible Algorithm Analysis & Design",
   "main": "index.js",
   "repository": "https://github.com/martinkilmartin/Introduction-To-Algorithms.git",
   "author": "martin <martinkilmartin@gmail.com>",
