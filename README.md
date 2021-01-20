@@ -204,3 +204,8 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
     sum: 6,
 }
 ```
+
+## Strassen’s algorithm for matrix multiplication
+> A simple divide-and-conquer algorithm
+
+
