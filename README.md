@@ -1,6 +1,10 @@
 # Introduction-To-Algorithms
 ## 1. Bubble Sort
+<<<<<<< HEAD
 > Incremental Algorithm Pseudocode
+=======
+> Incremental Algorithm pseudocode
+>>>>>>> d7b021be6cdb959aaa7aeb104d991a6c69261124
 
 ```
 1.  for i = 1 to Array.length
@@ -8,14 +12,18 @@
 3.          if  Array[j] < Array[j - 1]
 4.              swap Array[j] with Array[j - 1]
 ```
-* Example
+* Example intermediate states
 ``` [3,2,1] ```
 ```
-3. i{0}: Array[j]{1} < Array[j - 1]{2}
+3. i{1},j{3}: Array[j]{1} < Array[j - 1]{2}
 4. {[3,1,2]}
-3. i{0}: Array[j]{1} < Array[j - 1]{3}
+```
+```
+3. i{1},j{2}: Array[j]{1} < Array[j - 1]{3}
 4. {[1,3,2]}
-3. i{1}: Array[j]{2} < Array[j - 1]{3}
+```
+```
+3. i{2},j{3}: Array[j]{2} < Array[j - 1]{3}
 4. {[1,2,3]}
 
 ```
@@ -27,38 +35,43 @@
 | O(n<sup>2</sup>)      | O(1)                   |
 
 ## 2. Insertion Sort
+<<<<<<< HEAD
 > Incremental Algorithm Pseudocode
+=======
+> Incremental Algorithm pseudocode
+>>>>>>> d7b021be6cdb959aaa7aeb104d991a6c69261124
 
 ```
 1.   for i = 2 **to** Array.length
 2.       key = Array[i]
 3.       j = i - 1
-4.       while (j > 0 AND Array[j] > key)
+4.       while (j > 1 AND Array[j] > key)
 5.           Array[j + 1] = Array[j]
 6.           j = j - 1
 7.       Array[j + 1] = key 
 ```
 
-* Example
+* Example intermediate states 
 ``` [3,2,1] ```
-
 ``` 
 2. key = {2} 
-3. j = {0} 
+3. j = {1} 
 4. Array[j]{3} > key{2}
 5.      {[3,3,1]}
-6.      j = {-1}
+6.      j = {0}
 7. {[2,3,1]}
 ```
 ```
 2. key = {1}
-3. j = {1}
+3. j = {2}
 4. Array[j]{3} > key{1}
 5.      {[2,3,3]}
-6.      j = {0}
+6.      j = {1}
+```
+```
 4. Array[j]{2} > key{1}
 5.      {[2,2,3]}
-6.      j = {-1}
+6.      j = {0}
 7. {[1,2,3]}   
 ```
 
@@ -72,9 +85,9 @@
 ## 3. Merge Sort
 > Recursive Algorithm a.k.a. divide-and-conquer(and-combine) algorithm Pseudocode
 > * **Divide** the **problem** into *sub-problems*
-> * **Conquer** recursively solve the *smallest* sub-problems
+> * **Conquer** by solving the *smallest* sub-problems
 > * **Combine** the *sub-solutions* into the **solution** 
-
+> Pseudocode
 ```
 1.  function sort(Array) {
 2.      if (Array.length == 1) return Array
@@ -88,20 +101,20 @@
 10. function merge(LeftArray, RightArray) {
 11.     MergeArray[]
 12.     while (LeftArray AND RightArray) {
-13.         if (LeftArray[0] > RightArray[0]) {
-14.             MergeArray.push(RightArray[0])
+13.         if (LeftArray[1] > RightArray[1]) {
+14.             MergeArray.push(RightArray[1])
 15.             RightArray.shift()
 16.         } else {
-17.             MergeArray.push(LeftArray[0])
+17.             MergeArray.push(LeftArray[1])
 18.             LeftArray.shift()
 19.         }
 20.     }
 21.     while (LeftArray) {
-22.         MergeArray.push(LeftArray[0])
+22.         MergeArray.push(LeftArray[1])
 23.         LeftArray.shift()
 24.     }
 25.     while (RightArray) {
-26.         MergeArray.push(RightArray[0])
+26.         MergeArray.push(RightArray[1])
 27.         RightArray.shift()
 28.     }
 29.     return MergeArray
@@ -109,7 +122,7 @@
 
 ```
 
-* Example
+* Example intermediate states 
 ``` [9,8,7,6,5,4,3,2,1] ```
 
 ```
@@ -178,6 +191,7 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 42.     result.sum = leftSum + rightSum
 43.     return result
 44. }
+```
  * Example
 ``` [-2,1,-3,4,-1,2,1,-5,4] ```
 
