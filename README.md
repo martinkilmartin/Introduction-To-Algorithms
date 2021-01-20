@@ -1,10 +1,10 @@
 # Introduction-To-Algorithms
 ## 1. Bubble Sort
-> Incremental Algorithm
+> Incremental Algorithm Pseudocode
 
 ```
 1.  for i = 1 to Array.length
-2.      for j = Array.length downto i + 1
+2.      for j = Array.length **downto** i + 1
 3.          if  Array[j] < Array[j - 1]
 4.              swap Array[j] with Array[j - 1]
 ```
@@ -27,10 +27,10 @@
 | O(n<sup>2</sup>)      | O(1)                   |
 
 ## 2. Insertion Sort
-> Incremental Algorithm
+> Incremental Algorithm Pseudocode
 
 ```
-1.   for i = 2 to Array.length
+1.   for i = 2 **to** Array.length
 2.       key = Array[i]
 3.       j = i - 1
 4.       while (j > 0 AND Array[j] > key)
@@ -70,7 +70,7 @@
 
 
 ## 3. Merge Sort
-> Recursive Algorithm a.k.a. divide-and-conquer(and-combine) algorithm
+> Recursive Algorithm a.k.a. divide-and-conquer(and-combine) algorithm Pseudocode
 > * **Divide** the **problem** into *sub-problems*
 > * **Conquer** recursively solve the *smallest* sub-problems
 > * **Combine** the *sub-solutions* into the **solution** 
@@ -131,11 +131,67 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 | O(n log(n))           | O(n)                   |
 
 ## 4. Maximum Crossing SubArray
-> Recursive Algorithm a.k.a. divide-and-conquer(and-combine) algorithm
+> Recursive Algorithm a.k.a. divide-and-conquer(and-combine) algorithm Pseudocode
 
-* Example
-``` [-2,1,-3,4,-1,2,1,-5,4] ```
 ```
+1.  function findMaximumSubArray(Array, low, high) {
+2.      if (high == low) 
+3.          return { low, high, Array[low] }
+4.      else
+5.          mid = (low + high) / 2
+6.          { leftLow, leftHigh, leftSum } =
+7.              findMaximumSubArray(Array, low, mid)
+8.          { rightLow, rightHigh, rightSum } =
+9.              findMaximumSubArray(Array, mid + 1, high)
+10.         { crossLow, crossHigh, crossSum } =
+11.             findMaxCrossingSubArray(Array, low, mid, high)
+12.         if (leftSum >= rightSum && leftSum >= crossSum) {
+13.             return { leftLow, leftHigh, leftSum }
+14.         else if (rightSum >= leftSum && rightSum >= crossSum) {
+15.             return { rightLow, rightHigh, rightSum }
+16.         else {
+17.             return { crossLow, crossHigh, crossSum }
+18.         }
+19.     }
+20. }
+21.
+22. function findMaxCrossingSubArray(A, low, mid, high) {
+23.     result = { maxLeft, maxRight, sum}
+24.     leftSum = -∞
+25.     sum = 0
+26.     for i = mid **downto** low
+27.         sum = sum + A[i]
+28.         if (sum > leftSum) {
+29.             leftSum = sum
+30.             result.maxLeft = i
+31.         }
+32.     }
+33.     rightSum = -∞
+34.     sum = 0
+35.     for j = mid + 1 **to** high
+36.         sum = sum + A[j]
+37.         if (sum > rightSum) {
+38.             rightSum = sum
+39.             result.maxRight = j
+40.        }
+41.     }
+42.     result.sum = leftSum + rightSum
+43.     return result
+44. }
+ * Example
+``` [-2,1,-3,4,-1,2,1,-5,4] ```
+
+```
+[ -2, 1, -3, 4, -1, 2, 1, -5, 4 ] 0 4 9 
+[ -2, 1, -3, 4, -1, 2, 1, -5, 4 ] 5 7 9
+[ -2, 1, -3, 4, -1, 2, 1, -5, 4 ] 8 8 9
+[ -2, 1, -3, 4, -1, 2, 1, -5, 4 ] 5 6 7
+[ -2, 1, -3, 4, -1, 2, 1, -5, 4 ] 5 5 6
+[ -2, 1, -3, 4, -1, 2, 1, -5, 4 ] 0 2 4 
+[ -2, 1, -3, 4, -1, 2, 1, -5, 4 ] 3 3 4
+[ -2, 1, -3, 4, -1, 2, 1, -5, 4 ] 0 1 2
+[ -2, 1, -3, 4, -1, 2, 1, -5, 4 ] 0 0 1
+                                        
 {
     start: 3,
     end: 6,
