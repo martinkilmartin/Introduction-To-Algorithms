@@ -1,10 +1,6 @@
 # Introduction-To-Algorithms
 ## 1. Bubble Sort
-<<<<<<< HEAD
 > Incremental Algorithm Pseudocode
-=======
-> Incremental Algorithm pseudocode
->>>>>>> d7b021be6cdb959aaa7aeb104d991a6c69261124
 
 ```
 1.  for i = 1 to Array.length
@@ -15,8 +11,8 @@
 * Example intermediate states
 ``` [3,2,1] ```
 ```
-3. i{1},j{3}: Array[j]{1} < Array[j - 1]{2}
-4. {[3,1,2]}
+1. i{1},j{3}: Array[j]{1} < Array[j - 1]{2}
+2. {[3,1,2]}
 ```
 ```
 3. i{1},j{2}: Array[j]{1} < Array[j - 1]{3}
@@ -35,11 +31,7 @@
 | O(n<sup>2</sup>)      | O(1)                   |
 
 ## 2. Insertion Sort
-<<<<<<< HEAD
 > Incremental Algorithm Pseudocode
-=======
-> Incremental Algorithm pseudocode
->>>>>>> d7b021be6cdb959aaa7aeb104d991a6c69261124
 
 ```
 1.   for i = 2 **to** Array.length
@@ -54,12 +46,12 @@
 * Example intermediate states 
 ``` [3,2,1] ```
 ``` 
-2. key = {2} 
-3. j = {1} 
-4. Array[j]{3} > key{2}
-5.      {[3,3,1]}
-6.      j = {0}
-7. {[2,3,1]}
+1. key = {2} 
+2. j = {1} 
+3. Array[j]{3} > key{2}
+4.      {[3,3,1]}
+5.      j = {0}
+6. {[2,3,1]}
 ```
 ```
 2. key = {1}
