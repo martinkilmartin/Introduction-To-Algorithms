@@ -188,30 +188,54 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ``` [-2,1,-3,4,-1,2,1,-5,4] ```
 
 ```
-leftResult = findMaxSubArray(1, 1):{"maxLeft":0,"maxRight":0,"sum":-2}
-rightResult = findMaxSubArray(2, 2):{"maxLeft":1,"maxRight":1,"sum":1}
-crossResult = findMaxCrossingSubArray(1, 1, 2):{"maxLeft":0,"maxRight":1,"sum":-1}
-leftResult = findMaxSubArray(1, 2):{"maxLeft":1,"maxRight":1,"sum":1}
-rightResult = findMaxSubArray(3, 3):{"maxLeft":2,"maxRight":2,"sum":-3}
-crossResult = findMaxCrossingSubArray(1, 2, 3):{"maxLeft":1,"maxRight":2,"sum":-2}
-leftResult = findMaxSubArray(1, 3):{"maxLeft":1,"maxRight":1,"sum":1}
-leftResult = findMaxSubArray(4, 4):{"maxLeft":3,"maxRight":3,"sum":4}
-rightResult = findMaxSubArray(5, 5):{"maxLeft":4,"maxRight":4,"sum":-1}
-crossResult = findMaxCrossingSubArray(4, 4, 5):{"maxLeft":3,"maxRight":4,"sum":3}
-rightResult = findMaxSubArray(4, 5):{"maxLeft":3,"maxRight":3,"sum":4}
-crossResult = findMaxCrossingSubArray(1, 3, 5):{"maxLeft":1,"maxRight":3,"sum":2}
-leftResult = findMaxSubArray(1, 5):{"maxLeft":3,"maxRight":3,"sum":4}
-leftResult = findMaxSubArray(6, 6):{"maxLeft":5,"maxRight":5,"sum":2}
-rightResult = findMaxSubArray(7, 7):{"maxLeft":6,"maxRight":6,"sum":1}
-crossResult = findMaxCrossingSubArray(6, 6, 7):{"maxLeft":5,"maxRight":6,"sum":3}
-leftResult = findMaxSubArray(6, 7):{"maxLeft":5,"maxRight":6,"sum":3}
-leftResult = findMaxSubArray(8, 8):{"maxLeft":7,"maxRight":7,"sum":-5}
-rightResult = findMaxSubArray(9, 9):{"maxLeft":8,"maxRight":8,"sum":4}
-crossResult = findMaxCrossingSubArray(8, 8, 9):{"maxLeft":7,"maxRight":8,"sum":-1}
-rightResult = findMaxSubArray(8, 9):{"maxLeft":8,"maxRight":8,"sum":4}
-crossResult = findMaxCrossingSubArray(6, 7, 9):{"maxLeft":5,"maxRight":8,"sum":2}
-rightResult = findMaxSubArray(6, 9):{"maxLeft":8,"maxRight":8,"sum":4}
-crossResult = findMaxCrossingSubArray(1, 5, 9):{"maxLeft":3,"maxRight":6,"sum":6}
+leftResult  = findMaxSubArray(1, 1):
+                {"maxLeft":0,"maxRight":0,"sum":-2}
+rightResult = findMaxSubArray(2, 2):
+                {"maxLeft":1,"maxRight":1,"sum":1}
+crossResult = findMaxCrossingSubArray(1, 1, 2):
+                {"maxLeft":0,"maxRight":1,"sum":-1}
+leftResult  = findMaxSubArray(1, 2):
+                {"maxLeft":1,"maxRight":1,"sum":1}
+rightResult = findMaxSubArray(3, 3):
+                {"maxLeft":2,"maxRight":2,"sum":-3}
+crossResult = findMaxCrossingSubArray(1, 2, 3):
+                {"maxLeft":1,"maxRight":2,"sum":-2}
+leftResult  = findMaxSubArray(1, 3):
+                {"maxLeft": 1,"maxRight":1,"sum":1}
+leftResult  = findMaxSubArray(4, 4):
+                {"maxLeft":3,"maxRight":3,"sum":4}
+rightResult = findMaxSubArray(5, 5):
+                {"maxLeft":4,"maxRight":4,"sum":-1}
+crossResult = findMaxCrossingSubArray(4, 4, 5):
+                {"maxLeft":3,"maxRight":4,"sum":3}
+rightResult = findMaxSubArray(4, 5):
+                {"maxLeft":3,"maxRight":3,"sum":4}
+crossResult = findMaxCrossingSubArray(1, 3, 5):
+                {"maxLeft":1,"maxRight":3,"sum":2}
+leftResult  = findMaxSubArray(1, 5):
+                {"maxLeft":3,"maxRight":3,"sum":4}
+leftResult  = findMaxSubArray(6, 6):
+                {"maxLeft":5,"maxRight":5,"sum":2}
+rightResult = findMaxSubArray(7, 7):
+                {"maxLeft":6,"maxRight":6,"sum":1}
+crossResult = findMaxCrossingSubArray(6, 6, 7):
+                {"maxLeft":5,"maxRight":6,"sum":3}
+leftResult  = findMaxSubArray(6, 7):
+                {"maxLeft":5,"maxRight":6,"sum":3}
+leftResult  = findMaxSubArray(8, 8):
+                {"maxLeft":7,"maxRight":7,"sum":-5}
+rightResult = findMaxSubArray(9, 9):
+                {"maxLeft":8,"maxRight":8,"sum":4}
+crossResult = findMaxCrossingSubArray(8, 8, 9):
+                {"maxLeft":7,"maxRight":8,"sum":-1}
+rightResult = findMaxSubArray(8, 9):
+                {"maxLeft":8,"maxRight":8,"sum":4}
+crossResult = findMaxCrossingSubArray(6, 7, 9):
+                {"maxLeft":5,"maxRight":8,"sum":2}
+rightResult = findMaxSubArray(6, 9):
+                {"maxLeft":8,"maxRight":8,"sum":4}
+crossResult = findMaxCrossingSubArray(1, 5, 9):
+                {"maxLeft":3,"maxRight":6,"sum":6}
 { maxLeft: 3, maxRight: 6, sum: 6 }
 ```
 
