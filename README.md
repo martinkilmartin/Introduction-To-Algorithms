@@ -4,7 +4,7 @@
 
 ```
 1.  for i = 1 to Array.length
-2.      for j = Array.length **downto** i + 1
+2.      for j = Array.length downto i + 1
 3.          if  Array[j] < Array[j - 1]
 4.              swap Array[j] with Array[j - 1]
 ```
@@ -34,7 +34,7 @@
 > Incremental Algorithm Pseudocode
 
 ```
-1.   for i = 2 **to** Array.length
+1.   for i = 2 to Array.length
 2.       key = Array[i]
 3.       j = i - 1
 4.       while j > 1 AND Array[j] > key
@@ -156,14 +156,14 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 21.     maxRight = 0
 22.     sum = 0
 23.     leftSum = -∞
-24.     for i = mid **downto** low
+24.     for i = mid downto low
 25.         sum = sum + A[i]
 26.         if sum > leftSum
 27.             leftSum = sum
 28.             maxLeft = i
 29.     rightSum = -∞
 30.     sum = 0
-31.     for j = mid + 1 **to** high
+31.     for j = mid + 1 to high
 31.         sum = sum + A[j]
 33.         if sum > rightSum
 34.             rightSum = sum
@@ -288,9 +288,9 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 1.  function squareMatrixMultiply(A, B)
 2.      rowCount = A.rows
 3.      C = Matrix[n x n]
-4.      for i = 1 **to** rowCount
-5.          for j = 1 **to** rowCount
-6.              for k = 1 **to** rowCount
+4.      for i = 1 to rowCount
+5.          for j = 1 to rowCount
+6.              for k = 1 to rowCount
 7.                  C[ij] = C[ij] + A[ik] * B[kj]
 8.      return C
 ```
@@ -324,9 +324,16 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
-| O(n<sup>3</sup>)           | O(n)                   |
+| O(n<sup>3</sup>)      | O(n)                   |
 
 ## 6. Strassen’s algorithm for matrix multiplication
-> A simple divide-and-conquer algorithm
+> Strassen's great recursive algorithm for multiplying n x n matrices that runs in O(n<sup>lg7</sup>) time, which is asymptotically better than O(n<sup>3</sup>) of the previous matrix multiplication algorithm shown.
+```
+1.  function squareMatrixMultiply(A, B)
+2.    
+3.
+```
 
-
+| Worst Time Complexity | Worst Space Complexity |
+| --------------------- | ---------------------- |
+| O(n<sup>lg7</sup>)      | O(n)                   |
