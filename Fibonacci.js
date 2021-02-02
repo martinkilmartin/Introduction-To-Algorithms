@@ -1,3 +1,7 @@
+const {
+  benchmark,
+} = require("./BenchMark");
+
 function fibonacciLoop(n) {
   if (n <= 1) return n;
   const fib = [0, 1];
@@ -17,6 +21,10 @@ function fibonacciRecursiveMemoization(n, m) {
   if (m[n]) return m[n];
   return (m[n] = fibonacciRecursive(n - 1, m) + fibonacciRecursive(n - 2, m));
 }
+
+console.log(benchmark(fibonacciLoop, 20))
+console.log(benchmark(fibonacciRecursive, 20))
+console.log(benchmark(fibonacciRecursiveMemoization, 20, {}))
 
 module.exports = {
   fibonacciLoop,

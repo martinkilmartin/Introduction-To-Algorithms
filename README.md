@@ -365,3 +365,10 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
 | 0(2n)                 | 0(n)                   |
+
+* Benchmarks of 100k runs of fib(20)
+```
+    fibonacciLoop(20)                 : 23ms
+    fibonacciRecursive(20)            : 10169ms
+    fibonacciRecursiveMemoization(20) : 4ms
+```
