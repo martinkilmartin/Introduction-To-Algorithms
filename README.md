@@ -326,14 +326,14 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 | --------------------- | ---------------------- |
 | O(n<sup>3</sup>)      | O(n)                   |
 
-## 6. Strassen’s algorithm for matrix multiplication
-> Strassen's great recursive algorithm for multiplying n x n matrices that runs in O(n<sup>lg7</sup>) time, which is asymptotically better than O(n<sup>3</sup>) of the previous matrix multiplication algorithm shown.
+## 6. Fibonacci sequence
+> For n > 1, each number is the sum of the two preceding ones, starting from 0 and 1. 
 ```
-1.  function squareMatrixMultiply(A, B)
+1.  function fibonacciLoop(n)
 2.    
 3.
 ```
 
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
-| O(n<sup>lg7</sup>)      | O(n)                   |
+|                       |                        |
