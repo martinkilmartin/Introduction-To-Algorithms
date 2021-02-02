@@ -124,55 +124,55 @@ test("fibonacciRecursive of 35", () => {
     fibonacciRecursiveMemoization
 */
 test("fibonacciRecursiveMemoization of 0", () => {
-  expect(fibonacciRecursiveMemoization(0, [])).toStrictEqual(0);
+  expect(fibonacciRecursiveMemoization(0, {})).toStrictEqual(0);
 });
 test("fibonacciRecursiveMemoization of 1", () => {
-  expect(fibonacciRecursiveMemoization(1, [])).toStrictEqual(1);
+  expect(fibonacciRecursiveMemoization(1, {})).toStrictEqual(1);
 });
 
 test("fibonacciRecursiveMemoization of 2", () => {
-  expect(fibonacciRecursiveMemoization(2, [])).toStrictEqual(1);
+  expect(fibonacciRecursiveMemoization(2, {})).toStrictEqual(1);
 });
 
 test("fibonacciRecursiveMemoization of 3", () => {
-  expect(fibonacciRecursiveMemoization(3, [])).toStrictEqual(2);
+  expect(fibonacciRecursiveMemoization(3, {})).toStrictEqual(2);
 });
 
 test("fibonacciRecursiveMemoization of 4", () => {
-  expect(fibonacciRecursiveMemoization(4, [])).toStrictEqual(3);
+  expect(fibonacciRecursiveMemoization(4, {})).toStrictEqual(3);
 });
 
 test("fibonacciRecursiveMemoization of 5", () => {
-  expect(fibonacciRecursiveMemoization(5, [])).toStrictEqual(5);
+  expect(fibonacciRecursiveMemoization(5, {})).toStrictEqual(5);
 });
 
 test("fibonacciRecursiveMemoization of 6", () => {
-  expect(fibonacciRecursiveMemoization(6, [])).toStrictEqual(8);
+  expect(fibonacciRecursiveMemoization(6, {})).toStrictEqual(8);
 });
 
 test("fibonacciRecursiveMemoization of 7", () => {
-  expect(fibonacciRecursiveMemoization(7, [])).toStrictEqual(13);
+  expect(fibonacciRecursiveMemoization(7, {})).toStrictEqual(13);
 });
 
 test("fibonacciRecursiveMemoization of 8", () => {
-  expect(fibonacciRecursiveMemoization(8, [])).toStrictEqual(21);
+  expect(fibonacciRecursiveMemoization(8, {})).toStrictEqual(21);
 });
 
 test("fibonacciRecursiveMemoization of 9", () => {
-  expect(fibonacciRecursiveMemoization(9, [])).toStrictEqual(34);
+  expect(fibonacciRecursiveMemoization(9, {})).toStrictEqual(34);
 });
 
 test("fibonacciRecursiveMemoization of 10", () => {
-  expect(fibonacciRecursiveMemoization(10, [])).toStrictEqual(55);
+  expect(fibonacciRecursiveMemoization(10, {})).toStrictEqual(55);
 });
 
 test("fibonacciRecursiveMemoization of 11", () => {
-  expect(fibonacciRecursiveMemoization(11, [])).toStrictEqual(89);
+  expect(fibonacciRecursiveMemoization(11, {})).toStrictEqual(89);
 });
 test("fibonacciRecursiveMemoization of 12", () => {
-  expect(fibonacciRecursiveMemoization(12, [])).toStrictEqual(144);
+  expect(fibonacciRecursiveMemoization(12, {})).toStrictEqual(144);
 });
 
 test("fibonacciRecursiveMemoization of 35", () => {
-  expect(fibonacciRecursiveMemoization(35, [])).toStrictEqual(FIB_35);
+  expect(fibonacciRecursiveMemoization(35, {})).toStrictEqual(FIB_35);
 });
