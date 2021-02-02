@@ -327,13 +327,41 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 | O(n<sup>3</sup>)      | O(n)                   |
 
 ## 6. Fibonacci sequence
-> For n > 1, each number is the sum of the two preceding ones, starting from 0 and 1. 
+> For n > 1, each number is the sum of the two preceding ones, starting from 0 and 1.
+
+#### Fibonacci Loop
 ```
 1.  function fibonacciLoop(n)
-2.    
-3.
+2.      if n < 1 return n
+3.      fib = Array[0, 1]
+4.      for i = 3 to n
+5.          fib[i] = fib[i - 1] + fib[i - 2]
+6.      return fib[fib.length]
 ```
 
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
-|                       |                        |
+| 0(n)                  | 0(1)                   |
+
+#### Fibonacci Recursive
+```
+1.  function fibonacciRecursive(n)
+2.      if n < 1 return n
+3.      return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2)
+```
+
+| Worst Time Complexity | Worst Space Complexity |
+| --------------------- | ---------------------- |
+| 0(2<sup>n</sup>)      | 0(n)                   |
+
+#### Fibonacci Recursive Memoization
+```
+1.  function fibonacciRecursiveMemoization(n, m)
+2.      if n < 1 return n
+3.      if (m[n]) return m[n]
+4.      return m[n] = fibonacciRecursive(n - 1, m) + fibonacciRecursive(n - 2, m)
+```
+
+| Worst Time Complexity | Worst Space Complexity |
+| --------------------- | ---------------------- |
+| 0(2n)                 | 0(n)                   |
