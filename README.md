@@ -1,4 +1,9 @@
 # Introduction-To-Algorithms
+
+```yarn test```
+```jest test```
+```jest```
+
 ## 1. Bubble Sort
 > Incremental Algorithm Pseudocode
 

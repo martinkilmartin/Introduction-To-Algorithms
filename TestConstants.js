@@ -49,24 +49,24 @@ const MATRIX_B = [
   [1, 2],
 ];
 
-const MATRIX_3x3_A = [
+const MATRIX_3X3_A = [
   [10, 20, 10],
   [4, 5, 6],
   [2, 3, 5],
 ];
-const MATRIX_3x3_B = [
+const MATRIX_3X3_B = [
   [3, 2, 4],
   [3, 3, 9],
   [4, 4, 2],
 ];
 
-const MATRIX_4x4_A = [
+const MATRIX_4X4_A = [
   [5, 7, 9, 10],
   [2, 3, 3, 8],
   [8, 10, 2, 3],
   [3, 3, 4, 8],
 ];
-const MATRIX_4x4_B = [
+const MATRIX_4X4_B = [
   [3, 10, 12, 18],
   [12, 1, 4, 9],
   [9, 10, 12, 2],
@@ -82,12 +82,12 @@ const MATRIX_B_X_A = [
   [7, 10],
 ];
 
-const MATRIX_3x3_A_X_B = [
+const MATRIX_3X3_A_X_B = [
   [130, 120, 240],
   [51, 47, 73],
   [35, 33, 45],
 ];
-const MATRIX_4x4_A_X_B = [
+const MATRIX_4X4_A_X_B = [
   [210, 267, 236, 271],
   [93, 149, 104, 149],
   [171, 146, 172, 268],
@@ -114,14 +114,14 @@ module.exports = {
   MAX_SUB_ARRAY_MEDIUM_LEFT,
   MATRIX_A,
   MATRIX_B,
-  MATRIX_3x3_A,
-  MATRIX_3x3_B,
-  MATRIX_4x4_A,
-  MATRIX_4x4_B,
+  MATRIX_3X3_A,
+  MATRIX_3X3_B,
+  MATRIX_4X4_A,
+  MATRIX_4X4_B,
   MATRIX_A_X_B,
   MATRIX_B_X_A,
-  MATRIX_3x3_A_X_B,
-  MATRIX_4x4_A_X_B,
+  MATRIX_3X3_A_X_B,
+  MATRIX_4X4_A_X_B,
   FIB_35,
   FIB_39,
   FIB_44,

@@ -4,7 +4,7 @@
   "description": "Accessible Algorithm Analysis & Design",
   "main": "index.js",
   "repository": "https://github.com/martinkilmartin/Introduction-To-Algorithms.git",
-  "author": "martin <martinkilmartin@gmail.com>",
+  "author": "martinkilmartin",
   "license": "MIT",
   "devDependencies": {
     "jest": "^26.6.3"
