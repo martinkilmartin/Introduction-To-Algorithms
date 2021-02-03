@@ -15,7 +15,7 @@ function fibonacciRecursive(n) {
 function fibonacciRecursiveMemoization(n, m) {
   if (n <= 1) return n;
   if (m[n]) return m[n];
-  return (m[n] = fibonacciRecursive(n - 1, m) + fibonacciRecursive(n - 2, m));
+  return (m[n] = fibonacciRecursiveMemoization(n - 1, m) + fibonacciRecursiveMemoization(n - 2, m));
 }
 
 module.exports = {

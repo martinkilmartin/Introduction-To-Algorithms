@@ -338,7 +338,16 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 5.          fib[i] = fib[i - 1] + fib[i - 2]
 6.      return fib[fib.length]
 ```
-
+* Example ```fibonacciLoop(6)```
+```
+3.  [0, 1]
+5.  [0, 1, 1]
+5.  [0, 1, 1, 2]
+5.  [0, 1, 1, 2, 3]
+5.  [0, 1, 1, 2, 3, 5]
+5.  [0, 1, 1, 2, 3, 5, 8]
+6.  8
+```
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
 | 0(n)                  | 0(1)                   |
@@ -349,7 +358,35 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 2.      if n < 1 return n
 3.      return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2)
 ```
-
+* Example ```fibonacciRecursive(6)```
+```
+1.  6
+1.  5
+1.  4
+1.  3
+1.  2
+1.  1
+1.  0
+1.  1
+1.  2
+1.  1
+1.  0
+1.  3
+1.  2
+1.  1
+1.  0
+1.  1
+1.  4
+1.  3
+1.  2
+1.  1
+1.  0
+1.  1
+1.  2
+1.  1
+1.  0
+3.  8
+```
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
 | 0(2<sup>n</sup>)      | 0(n)                   |
@@ -359,9 +396,23 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 1.  function fibonacciRecursiveMemoization(n, m)
 2.      if n < 1 return n
 3.      if (m[n]) return m[n]
-4.      return m[n] = fibonacciRecursive(n - 1, m) + fibonacciRecursive(n - 2, m)
+4.      return m[n] = fibonacciRecursiveMemoization(n - 1, m) + fibonacciRecursiveMemoization(n - 2, m)
 ```
-
+* Example ```fibonacciRecursiveMemoization(6)```
+```
+1.  6 {}
+1.  5 {}
+1.  4 {}
+1.  3 {}
+1.  2 {}
+1.  1 {}
+1.  0 {}
+1.  1 { '2': 1 }
+1.  2 { '2': 1, '3': 2 }
+1.  3 { '2': 1, '3': 2, '4': 3 }
+1.  4 { '2': 1, '3': 2, '4': 3, '5': 5 }
+4.  8
+```
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
 | 0(2n)                 | 0(n)                   |
