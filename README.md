@@ -428,3 +428,41 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
     fibonacciRecursive(20)            : 10169ms
     fibonacciRecursiveMemoization(20) : 4ms
 ```
+
+## 7. Heap
+```
+1.  function parent(i)
+2.      return i >> 1
+```
+```
+1.  function leftChild(i)
+2.      return i << 1
+```
+```
+1.  function rightChild(i)
+2.      return (i << 1) + 1
+```
+
+## 8. Quicksort
+```
+1.  function quickSort(A, p, r)
+2.      if (p < r)
+3.          q = partition(A, p, r)
+4.          quickSort(A, p, q - 1)
+5.          quickSort(A, q + 1, r)
+6.      return A
+7.
+8.  function partition(A, p, r)
+9.      x = A[r]
+10.     i = p - 1
+11.     for j = p to r - 1
+12.     if A[j] <= x
+13.         i = i + 1
+14.         tmp = A[i]
+15.         A[i] = A[j]
+16.         A[j] = tmp
+17.     tmp = A[i + 1]
+18.     A[i + 1] = A[r]
+19.     A[r] = tmp
+20.     return i + 1
+```
