@@ -40,10 +40,24 @@ function buildMaxHeap(A) {
   return A;
 }
 
+function heapSort(A) {
+  buildMaxHeap(A);
+  const HEAP_SIZE = A.length - 1;
+  for (let i = HEAP_SIZE; i >= 0; i--) {
+      let tmp = A[0];
+      A[0] = A[i];
+      A[i] = tmp;
+      A.length = HEAP_SIZE;
+      maxHeapify(A, 0);
+  }
+  return A;
+}
+
 module.exports = {
   parent,
   leftChild,
   rightChild,
   maxHeapify,
   buildMaxHeap,
+  heapSort,
 };
