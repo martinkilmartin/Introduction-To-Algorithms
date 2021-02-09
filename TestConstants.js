@@ -105,6 +105,31 @@ const FIB_68 = 72723460248141;
 const FIB_73 = 806515533049393;
 const FIB_78 = 8944394323791464;
 
+const ARRAY_TO_HEAP = [4, 1, 3, 2, 16, 9, 10, 14, 8, 7];
+const LARGE_ARRAY_TO_HEAP = [
+  4,
+  1,
+  3,
+  2,
+  16,
+  9,
+  10,
+  14,
+  8,
+  7,
+  99,
+  88,
+  77,
+  14,
+  55,
+  23,
+  67,
+  56,
+  18,
+];
+const MAX_HEAP = [16, 14, 9, 10, 8, 1, 4, 2, 3, 7];
+const MAX_HEAP_SORTED = [1, 2, 3, 4, 7, 8, 9, 10, 14, 16];
+
 module.exports = {
   UNSORTED_ARRAY,
   SORTED_ARRAY_ASC,
@@ -132,4 +157,8 @@ module.exports = {
   FIB_68,
   FIB_73,
   FIB_78,
+  ARRAY_TO_HEAP,
+  LARGE_ARRAY_TO_HEAP,
+  MAX_HEAP,
+  MAX_HEAP_SORTED,
 };
