@@ -130,6 +130,16 @@ const LARGE_ARRAY_TO_HEAP = [
 const MAX_HEAP = [16, 14, 9, 10, 8, 1, 4, 2, 3, 7];
 const MAX_HEAP_SORTED = [1, 2, 3, 4, 7, 8, 9, 10, 14, 16];
 
+const LINKED_LIST_ARRAY = [9, 8, 7, 6, 1, 2, 3, 4, 10, 11, 20, 19];
+const SINGLY_LINKED_LIST_AS_STRING =
+  "(HEAD)->9->8->7->6->1->2->3->4->10->11->20->19~TAIL~";
+const APPENDED_SINGLY_LINKED_LIST_AS_STRING =
+  "(HEAD)->66->88->77->9->8->7->6->1->2->3->4->10->11->20->19~TAIL~";
+const DOUBLY_LINKED_LIST_AS_STRING =
+  "(HEAD)--{null<-[9]->8}----{9<-[8]->7}----{8<-[7]->6}----{7<-[6]->1}----{6<-[1]->2}----{1<-[2]->3}----{2<-[3]->4}----{3<-[4]->10}----{4<-[10]->11}----{10<-[11]->20}----{11<-[20]->19}----{20<-[19]->null}--~TAIL~";
+const APPENDED_DOUBLY_LINKED_LIST_AS_STRING =
+  "(HEAD)--{null<-[66]->88}----{66<-[88]->77}----{88<-[77]->9}----{77<-[9]->8}----{9<-[8]->7}----{8<-[7]->6}----{7<-[6]->1}----{6<-[1]->2}----{1<-[2]->3}----{2<-[3]->4}----{3<-[4]->10}----{4<-[10]->11}----{10<-[11]->20}----{11<-[20]->19}----{20<-[19]->null}--~TAIL~";
+
 module.exports = {
   UNSORTED_ARRAY,
   SORTED_ARRAY_ASC,
@@ -161,4 +171,9 @@ module.exports = {
   LARGE_ARRAY_TO_HEAP,
   MAX_HEAP,
   MAX_HEAP_SORTED,
+  LINKED_LIST_ARRAY,
+  SINGLY_LINKED_LIST_AS_STRING,
+  APPENDED_SINGLY_LINKED_LIST_AS_STRING,
+  DOUBLY_LINKED_LIST_AS_STRING,
+  APPENDED_DOUBLY_LINKED_LIST_AS_STRING,
 };

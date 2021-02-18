@@ -1,10 +1,10 @@
 # Introduction-To-Algorithms
 
 ```yarn test```
-```jest test```
-```jest```
 
-## 1. Bubble Sort
+## Foundations
+
+### 1. Bubble Sort
 > Incremental Algorithm Pseudocode
 
 ```
@@ -29,13 +29,13 @@
 
 ```
 
-### Complexity
+#### Complexity
 
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
 | O(n<sup>2</sup>)      | O(1)                   |
 
-## 2. Insertion Sort
+### 2. Insertion Sort
 > Incremental Algorithm Pseudocode
 
 ```
@@ -72,14 +72,14 @@
 7. {[1,2,3]}   
 ```
 
-### Complexity
+#### Complexity
 
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
 | O(n<sup>2</sup>)      | O(1)                   |
 
 
-## 3. Merge Sort
+### 3. Merge Sort
 > Recursive Algorithm a.k.a. divide-and-conquer(and-combine) algorithm Pseudocode
 > * **Divide** the **problem** into *sub-problems*
 > * **Conquer** by solving the *smallest* sub-problems
@@ -128,13 +128,13 @@ Merge:      [6, 7, 8, 9]           [1, 2, 3, 4, 5]
 Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
-### Complexity
+#### Complexity
 
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
 | O(n log(n))           | O(n)                   |
 
-## 4. Maximum Crossing SubArray
+### 4. Maximum Crossing SubArray
 > Recursive Algorithm a.k.a. divide-and-conquer(and-combine) algorithm Pseudocode
 
 ```
@@ -280,13 +280,13 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 17. { maxLeft: 4, maxRight: 7, sum: 6 }
 ```
 
-### Complexity
+#### Complexity
 
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
 | O(n log(n))           | O(1)                   |
 
-## 5. Matrix multiplication
+### 5. Matrix multiplication
 > An iterative algorithm
 
 ```
@@ -325,16 +325,16 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 7.    [ [ 2, 4 ], [ 7, 10 ] ]
 
 ```
-### Complexity
+#### Complexity
 
 | Worst Time Complexity | Worst Space Complexity |
 | --------------------- | ---------------------- |
 | O(n<sup>3</sup>)      | O(n)                   |
 
-## 6. Fibonacci sequence
+### 6. Fibonacci sequence
 > For n > 1, each number is the sum of the two preceding ones, starting from 0 and 1.
 
-#### 6.1 Fibonacci Loop
+##### 6.1 Fibonacci Loop
 ```
 1.  function fibonacciLoop(n)
 2.      if n < 1 return n
@@ -357,7 +357,7 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 | --------------------- | ---------------------- |
 | 0(n)                  | 0(1)                   |
 
-#### 6.2 Fibonacci Recursive
+##### 6.2 Fibonacci Recursive
 ```
 1.  function fibonacciRecursive(n)
 2.      if n < 1 return n
@@ -396,7 +396,7 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 | --------------------- | ---------------------- |
 | 0(2<sup>n</sup>)      | 0(n)                   |
 
-#### 6.3 Fibonacci Recursive Memoization
+##### 6.3 Fibonacci Recursive Memoization
 ```
 1.  function fibonacciRecursiveMemoization(n, m)
 2.      if n < 1 return n
@@ -429,7 +429,7 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
     fibonacciRecursiveMemoization(20) : 4ms
 ```
 
-## 7. Heap
+### 7. Heap
 ```
 1.  function parent(i)
 2.      return i >> 1
@@ -443,7 +443,7 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 2.      return (i << 1) + 1
 ```
 
-## 8. Quicksort
+### 8. Quicksort
 ```
 1.  function quickSort(A, p, r)
 2.      if (p < r)
@@ -469,35 +469,60 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 
 * Example 
 ```
--3 0 [ 7, 4, 5, 2, 10, 1, -3, 945, 0 ]
-7 0 [ -3, 4, 5, 2, 10, 1, 7, 945, 0 ]
-2 4 [ -3, 0, 5, 2, 10, 1, 7, 945, 4 ]
-5 4 [ -3, 0, 2, 5, 10, 1, 7, 945, 4 ]
-1 4 [ -3, 0, 2, 5, 10, 1, 7, 945, 4 ]
-5 4 [ -3, 0, 2, 1, 10, 5, 7, 945, 4 ]
-2 10 [ -3, 0, 1, 2, 4, 5, 7, 945, 10 ]
-2 10 [ -3, 0, 1, 2, 4, 5, 7, 945, 10 ]
-4 10 [ -3, 0, 1, 2, 4, 5, 7, 945, 10 ]
-4 10 [ -3, 0, 1, 2, 4, 5, 7, 945, 10 ]
-5 10 [ -3, 0, 1, 2, 4, 5, 7, 945, 10 ]
-5 10 [ -3, 0, 1, 2, 4, 5, 7, 945, 10 ]
-7 10 [ -3, 0, 1, 2, 4, 5, 7, 945, 10 ]
-7 10 [ -3, 0, 1, 2, 4, 5, 7, 945, 10 ]
-2 7 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-2 7 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-4 7 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-4 7 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-5 7 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-5 7 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-2 5 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-2 5 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-4 5 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-4 5 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-2 4 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-2 4 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-5 7 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-5 7 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-10 945 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
-10 945 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
+[ 7, 4, 5, 2, 10, 1, -3, 945, 0 ] -3 0 
+[ -3, 4, 5, 2, 10, 1, 7, 945, 0 ] 7 0 
+[ -3, 0, 5, 2, 10, 1, 7, 945, 4 ] 2 4 
+[ -3, 0, 2, 5, 10, 1, 7, 945, 4 ] 5 4 
+[ -3, 0, 2, 5, 10, 1, 7, 945, 4 ] 1 4 
+[ -3, 0, 2, 1, 10, 5, 7, 945, 4 ] 5 4 
+[ -3, 0, 1, 2, 4, 5, 7, 945, 10 ] 2 10 
+[ -3, 0, 1, 2, 4, 5, 7, 945, 10 ] 2 10 
+[ -3, 0, 1, 2, 4, 5, 7, 945, 10 ] 4 10 
+[ -3, 0, 1, 2, 4, 5, 7, 945, 10 ] 4 10 
+[ -3, 0, 1, 2, 4, 5, 7, 945, 10 ] 5 10 
+[ -3, 0, 1, 2, 4, 5, 7, 945, 10 ] 5 10 
+[ -3, 0, 1, 2, 4, 5, 7, 945, 10 ] 7 10 
+[ -3, 0, 1, 2, 4, 5, 7, 945, 10 ] 7 10 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 2 7 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 2 7 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 4 7 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 4 7 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 5 7 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 5 7 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 2 5 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 2 5 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 4 5 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 4 5 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 2 4 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 2 4 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 5 7 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 5 7 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 10 945 
+[ -3, 0, 1, 2, 4, 5, 7, 10, 945 ] 10 945 
 [ -3, 0, 1, 2, 4, 5, 7, 10, 945 ]
 ```
+
+## Data Structures
+
+### 9. Linked Lists
+```
+1.  LinkedList = {
+2.      HEAD: LinkedListNode
+3.  }
+```
+#### 9.1. Singly Linked List
+```
+1.  SinglyLinkedListNode = {
+2.      value: x
+3.      next: SinglyLinkedListNode | null
+4.  }
+```
+#### 9.2. Doubly Linked List
+```
+1.  DoublyLinkedListNode = {
+2.     value: x
+3.     next: DoublyLinkedListNode | null
+4.     prev: DoublyLinkedListNode | null
+5.  }
+```
+
