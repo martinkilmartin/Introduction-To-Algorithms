@@ -503,21 +503,70 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ## Data Structures
+* Operations on dynamic Sets
 
-### 9. Linked Lists
+| Queries                       | Modifying Operations   |
+| ---------------------         | ---------------------- |
+| **search**(Set, value)        | **insert**(Set, value) |
+| **minimum**(Set)              | **delete**(Set, value) |
+| **maximum**(Set)              |                        |
+| **successor**(Set, element)   |                        |
+| **predecessor**(Set, element) |                        |
+
+
+### 9. Stacks
+* LIFO
+```
+1.  function stackEmpty(S)
+2.      if S.top == 0
+3.          return true
+4.      return false
+5. 
+6.  function push(S, x)
+7.      S.top = S.top + 1
+8.      S[S.top] = x
+9. 
+10. function pop(S)
+11.     if stackEmpty(S)
+12.         return Error("UnderFlow")
+13.     else
+14.         S.top = S.top - 1
+15.     return S[S.top + 1]
+```
+
+### 10. Queues
+* FIFO
+```
+1.  function enQueue(Q, x)
+2.      Q[Q.tail] = x
+3.      if Q.tail == Q.length
+4.          Q.tail = 1
+5.      else
+6.          Q.tail = Q.tail + 1
+7. 
+8.  function deQueue(Q)
+9.      x = Q[Q.head]
+10.     if Q.head == Q.length
+11.         Q.head = 1
+12.     else
+13.         Q.head = Q.head + 1
+14.     return x
+```
+
+### 11. Linked Lists
 ```
 1.  LinkedList = {
 2.      HEAD: LinkedListNode
 3.  }
 ```
-#### 9.1. Singly Linked List
+#### 11.1. Singly Linked List
 ```
 1.  SinglyLinkedListNode = {
 2.      value: x
 3.      next: SinglyLinkedListNode | null
 4.  }
 ```
-#### 9.2. Doubly Linked List
+#### 11.2. Doubly Linked List
 ```
 1.  DoublyLinkedListNode = {
 2.     value: x
@@ -526,3 +575,4 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 5.  }
 ```
 
+### 12. Binary Search Trees
