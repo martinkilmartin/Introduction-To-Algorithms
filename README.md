@@ -507,7 +507,7 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ### 9. Linked Lists
 ```
 1.  LinkedList = {
-2.      HEAD: LinkedListNode
+2.      HEAD: LinkedListNode | null
 3.  }
 ```
 #### 9.1. Singly Linked List
