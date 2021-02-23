@@ -1,4 +1,9 @@
 class BinarySearchTree {
+  constructor(root) {
+    this.root = root;
+  }
+}
+class BinarySearchTreeNode {
   constructor(value, parent, left, right) {
     this.value = value;
     this.parent = parent;
@@ -7,101 +12,134 @@ class BinarySearchTree {
   }
 }
 
-function inOrderTreeWalk(BST) {
-  if (BST) {
-    inOrderTreeWalk(BST.left);
-    console.log(BST.value);
-    inOrderTreeWalk(BST.right);
+function nullTree() {
+  return new BinarySearchTree(null);
+}
+
+function inOrderWalk(n) {
+  if (n) {
+    inOrderWalk(n.left);
+    console.log(n.value);
+    inOrderWalk(n.right);
   }
 }
 
-function treeSearch(BST, k) {
-  if (!BST || BST.value === k) {
-    return BST;
+function search(node, k) {
+  const T = node;
+  if (!T || T.value === k) {
+    return T;
   }
-  if (key < BST.value) {
-    return treeSearch(BST.left, k);
+  if (k < T.value) {
+    return search(T.left, k);
   } else {
-    return treeSearch(BST.right, k);
+    return search(T.right, k);
   }
 }
 
-function iterativeTreeSearch(BST, k) {
-  while (BST && k !== BST.key) {
-    if (k < BST.key) {
-      BST = BST.left;
+function iterativeSearch(node, k) {
+  let t = node;
+  while (t && k !== t.value) {
+    if (k < t.value) {
+      t = t.left;
     } else {
-      BST = BST.right;
+      t = t.right;
     }
   }
-  return BST;
+  return t;
 }
 
-function treeMinimum(BST) {
-    while (BST.left) {
-        BST = BST.left;
-    }
-    return BST;
+function minimum(node) {
+  let t = node;
+  while (t.left) {
+    t = t.left;
+  }
+  return t;
 }
 
-function treeMaximum(BST) {
-    while (BST.right) {
-        BST = BST.right;
-    }
-    return BST;
+function maximum(node) {
+  let t = node;
+  while (t.right) {
+    t = t.right;
+  }
+  return t;
 }
 
-function treeSuccessor(BST) {
-    if (BST.right) {
-        return treeMinimum(BST.right);
-    }
-    let parent = BST.parent;
-    while (parent && BST === parent.right) {
-        BST = parent;
-        parent = parent.parent;
-    }
-    return parent;
+function successor(node) {
+  let t = node;
+  if (t.right) {
+    return minimum(t.right);
+  }
+  let parent = t.parent;
+  while (parent && t === parent.right) {
+    t = parent;
+    parent = parent.parent;
+  }
+  return parent;
 }
 
-function treeInsert(BST, z) {
-    let y;
-    let x = BST;
-    while (x) {
-        y = x;
-        if (z.value < x.value) {
-            x = x.left;
-        }
-        else {
-            x = x.right;
-        }
+function insert(BST, value) {
+  const N = new BinarySearchTreeNode(value, null, null, null);
+  let y;
+  let x = BST.root;
+  while (x) {
+    y = x;
+    if (value < x.value) {
+      x = x.left;
+    } else {
+      x = x.right;
     }
-    z.parent = y;
-    if (y === null) {
-        BST = z;
+  }
+  if (y === null || y === undefined) {
+    BST.root = N;
+  } else {
+    N.parent = y;
+    if (value < y.value) {
+      y.left = N;
+    } else {
+      y.right = N;
     }
-    else if (z.value < y.value) {
-        y.left = z;
-    }
-    else {
-        y.right = z;
-    }
+  }
 }
 
-let bst = {};
+function transplant(BST, u, v) {
+  if (u.parent === null) {
+    BST.root = v;
+  } else if (u === u.parent.left) {
+    u.parent.left = v;
+  } else {
+    u.parent.right = v;
+  }
+  if (v) {
+    v.parent = u.parent;
+  }
+}
 
-treeInsert(bst, new BinarySearchTree(15, null, null, null));
+function treeDelete(BST, n) {
+  if (n.left === null) {
+    transplant(BST, n, n.right);
+  } else if (n.right === null) {
+    transplant(BST, n, n.right);
+  } else {
+    y = minimum(BST.root);
+    if (y.parent !== n) {
+      transplant(BST, y, y.right);
+      y.right = n.right;
+      y.right.parent = y;
+    }
+    transplant(BST, n, y);
+    y.left = n.left;
+    y.left.parent = y;
+  }
+}
 
-console.log(bst);
-
-treeInsert(bst, new BinarySearchTree(19, null, null, null));
-treeInsert(bst, new BinarySearchTree(2, null, null, null));
-treeInsert(bst, new BinarySearchTree(5, null, null, null));
-treeInsert(bst, new BinarySearchTree(18, null, null, null));
-treeInsert(bst, new BinarySearchTree(17, null, null, null));
-treeInsert(bst, new BinarySearchTree(12, null, null, null));
-treeInsert(bst, new BinarySearchTree(9, null, null, null));
-treeInsert(bst, new BinarySearchTree(13, null, null, null));
-
-console.log(bst);
-
-console.log(inOrderTreeWalk(bst));
+module.exports = {
+  nullTree,
+  inOrderWalk,
+  search,
+  iterativeSearch,
+  minimum,
+  maximum,
+  successor,
+  insert,
+  treeDelete,
+};
