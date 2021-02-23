@@ -576,3 +576,15 @@ Merge:            [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
 
 ### 12. Binary Search Trees
+```
+1.  BinarySearchTree = {
+2.    root: BinarySearchTreeNode | null
+3.  }
+4. 
+5.  BinarySearchTreeNode {
+6.    value: x
+7.    parent: BinarySearchTreeNode | null
+8.    left: BinarySearchTreeNode | null
+9.    right: BinarySearchTreeNode | null
+10. }
+```
