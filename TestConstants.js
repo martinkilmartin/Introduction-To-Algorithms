@@ -94,6 +94,20 @@ const MATRIX_4X4_A_X_B = [
   [105, 169, 128, 169],
 ];
 
+const FACT_0 = 1;
+const FACT_1 = 1;
+const FACT_2 = 2;
+const FACT_3 = 6;
+const FACT_4 = 24;
+const FACT_5 = 120;
+const FACT_6 = 720;
+const FACT_7 = 5040;
+const FACT_8 = 40320;
+const FACT_9 = 362880;
+const FACT_10 = 3628800;
+const FACT_11 = 39916800;
+const FACT_12 = 479001600;
+
 const FIB_35 = 9227465;
 const FIB_39 = 63245986;
 const FIB_44 = 701408733;
@@ -157,6 +171,19 @@ module.exports = {
   MATRIX_B_X_A,
   MATRIX_3X3_A_X_B,
   MATRIX_4X4_A_X_B,
+  FACT_0,
+  FACT_1,
+  FACT_2,
+  FACT_3,
+  FACT_4,
+  FACT_5,
+  FACT_6,
+  FACT_7,
+  FACT_8,
+  FACT_9,
+  FACT_10,
+  FACT_11,
+  FACT_12,
   FIB_35,
   FIB_39,
   FIB_44,
